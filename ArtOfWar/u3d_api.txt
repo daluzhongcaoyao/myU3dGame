@@ -1,0 +1,112 @@
+
+物理操作，区别于UI更新，1秒50次
+FixedUpatae
+
+旋转与移动
+Translate(Vector3,space)
+Rotate(Vectory,float )
+
+
+获取对象
+getGameObject
+getComponent  
+
+触发器，独立于update
+void OnTriggerEnter(Collider coll)
+void OnTriggerExit(Collider coll)
+
+OnCollisionEnter(Collider coll)
+OnCollisionExit(Collider coll)
+OnCollisionStay(Collider coll)
+
+查找某个物体(GameObject是static，直接用)
+GameObject.Find(String)
+
+获取鼠标
+GetMouseButton
+GetMouseButtonUp
+GetMouseButtonDown
+Input.mousePosition 鼠标所在的位置
+
+OnMouseEnter
+OnMouseExit
+OnMouseDown
+
+获取键盘
+GetKey
+GetKeyUp
+GetKeyDown
+
+通过标签获取物体
+GameObject.FindGameObjectWithTag(string tag)
+
+实例化
+GameObject.Instantiate(Object,Vector3,Quaternion)
+Invoke(string, float) 函数名，倒计时
+InvokeRepeating(string, float, float) 函数名，倒计时，后续倒计时
+CancelInvoke()取消
+
+调用方法
+gameObject.SendMessage(String)
+
+协调程序
+IEnmerator返回值类型
+yield return 协调程序返回
+new WaitForSecond(2) 等2秒
+StartCoroutine("程序名") 开启协调程序
+StopCoroutine("程序名") 停止协调程序
+
+生命周期
+Awake
+OnEnable
+Start
+FixedUpdate（0.02秒一次）
+Update(一帧一次)
+LateUpdate
+onGUI
+onDisable
+onDestroy
+
+屏幕的高度与宽度
+Screen.height
+Screen.width
+
+时间
+Time.time 游戏开始到现在进行的秒数
+Time.deltaTime 渲染上一帧的用时（倒计时）
+Time.timeScale 时间缩放。1正常，0暂停，0.5半速慢放
+
+数学运算
+Mathf.abs
+Mathf.Max
+Mathf.Min
+Mathf.Round 四舍五入
+Mathf.Lerp(float,float,float)插值运算  (起点数，终点数，ab间的数0~1)
+例：num = Mathf.Lerp(num,10,Time.deltaTime)
+
+物理射线
+Physics.RaycastHit(Ray,out RaycastHit) RaycastHit 是碰撞信息
+RaycastHit.point 获取射线碰撞点
+RaycastHit.collision
+
+屏幕点击的点转换成射线
+ray = Camera.main.ScreenPointToRay(Input.mousePosition)
+
+发射子弹，增加一个力
+GetComponent<Rigidbody>().AddForce(dir * power)
+Vector3 dir = 目标点 - 起始点
+power是初始力度
+
+
+
+
+
+
+
+
+
+
+
+
+
+
