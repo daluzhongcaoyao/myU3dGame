@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CreateCube : MonoBehaviour {
 	public GameObject GoldBox;
+	public GameObject Brick;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +20,10 @@ public class CreateCube : MonoBehaviour {
 		//GameObject.Instantiate(GoldBox, position, Quaternion.identity);
 		int i = 0;
 		int j = 0;
-		for(i=0; i<2; i++){
-			for (j=0;j<2;j++){
-				Vector3 CreatePosition = new Vector3(i*5,10,20);
-				GameObject.Instantiate(GoldBox, CreatePosition, Quaternion.identity);
+		for(i=0; i<20; i++){
+			for (j=0;j<10;j++){
+				Vector3 CreatePosition = new Vector3(i-20,j,0);
+				GameObject.Instantiate(Brick, CreatePosition, Quaternion.identity);
 			}
 		}
 	}
