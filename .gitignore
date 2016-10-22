@@ -1,0 +1,12 @@
+*.meta
+*.swp
+*.sln
+*.userprefs
+*.csproj
+*.bin
+*.assert
+*.db
+*.mat
+Library
+ProjectSettings
+
