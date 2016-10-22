@@ -8,5 +8,6 @@
 *.db
 *.mat
 Library
+Temp
 ProjectSettings
 
