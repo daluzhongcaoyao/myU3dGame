@@ -21,7 +21,7 @@ public class CreateCube : MonoBehaviour {
 		int j = 0;
 		for(i=0; i<2; i++){
 			for (j=0;j<2;j++){
-				Vector3 CreatePosition = new Vector3(i*5,j*5,20);
+				Vector3 CreatePosition = new Vector3(i*5,10,20);
 				GameObject.Instantiate(GoldBox, CreatePosition, Quaternion.identity);
 			}
 		}
